@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+
+<script type="text/javascript">
+	var z = 10;
+	function add(x, y) {
+		return x + y;
+	}
+	
+	function justTen() {
+		return 10;
+	} 
+	
+	function addNoReturn(x, y) {
+		var z = x + y;
+	}
+
+	
+	
+	function add(x, y) {
+		return x + y;
+	}
+	console.log(add(1, 2)); // 3
+	console.log(add(1, 2)); // 3
+	console.log(add(1, 2)); // 3
+	
+	var x = 1;
+	x = x + 1;
+	
+	// simple loop construct
+	var acc = 0;
+	for ( var i = 1; i <= 10; i++ )
+		acc += i;
+	console.log(acc);
+	// without loop construct or variables (recursion)
+	function sumRange(start, end, acc) {
+		if ( start > end )
+			return acc;
+		return sumRange( start + 1, end, acc + start)
+	}
+	console.log(sumRange(1,10,0));
+</script>
+</body>
+</html>
